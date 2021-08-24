@@ -3,9 +3,6 @@
 require 'rubygems'
 require 'mkmf'
 
-# $CFLAGS << " -Wno-format-security"
-# CONFIG['optflags'] << ' -fno-strict-aliasing' unless RUBY_PLATFORM =~ /mswin/
-
 dir_config 'microssl_ext'
 
 found_ssl = if pkg_config 'openssl'
@@ -34,6 +31,8 @@ have_func  "SSL_CTX_set_min_proto_version(NULL, 0)", "openssl/ssl.h"
 
 have_func  "X509_STORE_up_ref"
 have_func("SSL_CTX_set_ecdh_auto(NULL, 0)", "openssl/ssl.h")
+
+have_func("SSL_CTX_get_security_level")
 
 # Random.bytes available in Ruby 2.5 and later, Random::DEFAULT deprecated in 3.0
 if Random.respond_to?(:bytes)
