@@ -1,0 +1,24 @@
+PATH
+  remote: .
+  specs:
+    h1p (0.2)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.14.4)
+    rake (13.0.6)
+    rake-compiler (1.1.1)
+      rake
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  h1p!
+  minitest (~> 5.14.4)
+  rake (~> 13.0.6)
+  rake-compiler (= 1.1.1)
+
+BUNDLED WITH
+   2.2.26
