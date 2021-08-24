@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    h1p (0.2)
+    microssl (0.2)
 
 GEM
   remote: https://rubygems.org/
@@ -15,7 +15,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  h1p!
+  microssl!
   minitest (~> 5.14.4)
   rake (~> 13.0.6)
   rake-compiler (= 1.1.1)
